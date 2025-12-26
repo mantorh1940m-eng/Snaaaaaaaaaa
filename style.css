@@ -1,12 +1,14 @@
 body {
     background-color: #1a1a1a;
     color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 100vh;
+    justify-content: center;
+    min-height: 100vh;
     margin: 0;
+    overflow: hidden; /* لمنع اهتزاز الشاشة في الهاتف */
 }
 
 .game-container {
@@ -15,27 +17,46 @@ body {
 
 canvas {
     background-color: #000;
-    border: 5px solid #4CAF50;
-    box-shadow: 0 0 20px rgba(76, 175, 80, 0.5);
-    display: block;
-    margin: 20px auto;
+    border: 4px solid #4CAF50;
+    max-width: 90vw; /* ليناسب عرض شاشة الهاتف */
+    height: auto;
 }
 
-#scoreBoard {
+.controls {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.middle-row {
+    display: flex;
+    gap: 30px;
+}
+
+.ctrl-btn {
+    width: 65px;
+    height: 65px;
+    background-color: #333;
+    border: 2px solid #4CAF50;
+    color: white;
     font-size: 24px;
-    margin-bottom: 10px;
+    border-radius: 50%;
+    touch-action: manipulation; /* يمنع التكبير عند النقر المتكرر */
 }
 
-button {
-    padding: 10px 20px;
-    font-size: 16px;
+.ctrl-btn:active {
     background-color: #4CAF50;
+}
+
+#restartBtn {
+    padding: 10px 25px;
+    background-color: #e74c3c;
     color: white;
     border: none;
-    cursor: pointer;
     border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
 }
 
-button:hover {
-    background-color: #45a049;
-}
