@@ -2,18 +2,28 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>لعبة الثعبان الكلاسيكية</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>لعبة الثعبان للموبايل والكمبيوتر</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="game-container">
         <h1>لعبة الثعبان</h1>
         <div id="scoreBoard">النقاط: 0</div>
-        <canvas id="snakeGame" width="400" height="400"></canvas>
-        <p>استخدم أسهم الكيبورد للتحرك</p>
-        <button onclick="location.reload()">إعادة اللعب</button>
+        <canvas id="snakeGame" width="360" height="360"></canvas>
+        
+        <div class="controls">
+            <button class="ctrl-btn" id="upBtn">▲</button>
+            <div class="middle-row">
+                <button class="ctrl-btn" id="leftBtn">◀</button>
+                <button class="ctrl-btn" id="downBtn">▼</button>
+                <button class="ctrl-btn" id="rightBtn">▶</button>
+            </div>
+        </div>
+
+        <button id="restartBtn" onclick="location.reload()">إعادة اللعب</button>
     </div>
     <script src="script.js"></script>
 </body>
 </html>
+
