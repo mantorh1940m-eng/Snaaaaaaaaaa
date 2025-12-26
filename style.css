@@ -1,0 +1,41 @@
+body {
+    background-color: #1a1a1a;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.game-container {
+    text-align: center;
+}
+
+canvas {
+    background-color: #000;
+    border: 5px solid #4CAF50;
+    box-shadow: 0 0 20px rgba(76, 175, 80, 0.5);
+    display: block;
+    margin: 20px auto;
+}
+
+#scoreBoard {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
